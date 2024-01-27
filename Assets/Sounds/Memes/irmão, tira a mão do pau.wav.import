@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bf8wo57tth28j"
+path="res://.godot/imported/irmão, tira a mão do pau.wav-f087cbee0b228cc0d58c7ce546897931.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/irmão, tira a mão do pau.wav"
+dest_files=["res://.godot/imported/irmão, tira a mão do pau.wav-f087cbee0b228cc0d58c7ce546897931.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

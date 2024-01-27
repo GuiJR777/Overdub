@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bvvqa7vslrmsa"
+path="res://.godot/imported/puta que pariu, batman.wav-a428972d7a9eb2cbbbd9f0f866d1f107.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/puta que pariu, batman.wav"
+dest_files=["res://.godot/imported/puta que pariu, batman.wav-a428972d7a9eb2cbbbd9f0f866d1f107.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

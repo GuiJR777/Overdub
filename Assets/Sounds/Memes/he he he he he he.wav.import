@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bn1cx7so0k1bi"
+path="res://.godot/imported/he he he he he he.wav-5b16c3cb42f6759118084f9fdaf65188.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/he he he he he he.wav"
+dest_files=["res://.godot/imported/he he he he he he.wav-5b16c3cb42f6759118084f9fdaf65188.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

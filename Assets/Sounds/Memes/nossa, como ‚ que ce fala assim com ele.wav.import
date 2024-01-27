@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bcqw0qb330jl0"
+path="res://.godot/imported/nossa, como ‚ que ce fala assim com ele.wav-2fbed440122dc115f1fd633bbd7dded5.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/nossa, como ‚ que ce fala assim com ele.wav"
+dest_files=["res://.godot/imported/nossa, como ‚ que ce fala assim com ele.wav-2fbed440122dc115f1fd633bbd7dded5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

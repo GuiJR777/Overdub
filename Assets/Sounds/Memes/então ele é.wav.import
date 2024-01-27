@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://db63tgmx5b644"
+path="res://.godot/imported/então ele é.wav-49a4f3d39f21a851eac73a5796573abe.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/então ele é.wav"
+dest_files=["res://.godot/imported/então ele é.wav-49a4f3d39f21a851eac73a5796573abe.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

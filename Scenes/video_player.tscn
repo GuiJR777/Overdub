@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=3 uid="uid://beec41bxjr722"]
+
+[ext_resource type="VideoStream" path="res://Assets/Videos/Memes/kombi-drift.ogv" id="1_7i3c3"]
+[ext_resource type="Script" path="res://Scripts/video_playergd.gd" id="2_2kwba"]
+[ext_resource type="Texture2D" uid="uid://b0gi2nubsce1e" path="res://Assets/Images/Icons/forward.png" id="3_eq3ox"]
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer"]
+custom_minimum_size = Vector2(1200, 750)
+size_flags_horizontal = 4
+size_flags_vertical = 0
+stream = ExtResource("1_7i3c3")
+expand = true
+script = ExtResource("2_2kwba")
+
+[node name="BG" type="ColorRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="PlayPauseButton" type="TextureButton" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+texture_normal = ExtResource("3_eq3ox")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VideoTimeLabel" type="Label" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 48
+text = "00:00"
+
+[connection signal="finished" from="." to="." method="_on_finished"]
+[connection signal="mouse_entered" from="PlayPauseButton" to="." method="_on_play_pause_button_mouse_entered"]
+[connection signal="mouse_exited" from="PlayPauseButton" to="." method="_on_play_pause_button_mouse_exited"]
+[connection signal="pressed" from="PlayPauseButton" to="." method="_on_play_pause_button_pressed"]

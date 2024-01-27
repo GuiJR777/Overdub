@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dxmajihp0gcdp"
+path="res://.godot/imported/sai, maluco, todo dia isso, tifude hein.wav-95208c28c55598935450b3a16b261af6.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/sai, maluco, todo dia isso, tifude hein.wav"
+dest_files=["res://.godot/imported/sai, maluco, todo dia isso, tifude hein.wav-95208c28c55598935450b3a16b261af6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cpmf7qur1238j"
+path="res://.godot/imported/e ai meu parceiro, quer fazer um tratamento de beleza, de o c.wav-c82e0ecebde085c53bf91c66e95f378f.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/e ai meu parceiro, quer fazer um tratamento de beleza, de o c.wav"
+dest_files=["res://.godot/imported/e ai meu parceiro, quer fazer um tratamento de beleza, de o c.wav-c82e0ecebde085c53bf91c66e95f378f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

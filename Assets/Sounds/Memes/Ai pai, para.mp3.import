@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bksotsol66xg8"
+path="res://.godot/imported/Ai pai, para.mp3-0855a33e9e1d1b51a46a4fcf4e9c8160.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/Ai pai, para.mp3"
+dest_files=["res://.godot/imported/Ai pai, para.mp3-0855a33e9e1d1b51a46a4fcf4e9c8160.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

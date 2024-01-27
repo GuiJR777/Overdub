@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cprsdy5qva0yf"
+path="res://.godot/imported/quero cafe.wav-11f597f48ea7357d62d91a320a467353.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/quero cafe.wav"
+dest_files=["res://.godot/imported/quero cafe.wav-11f597f48ea7357d62d91a320a467353.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

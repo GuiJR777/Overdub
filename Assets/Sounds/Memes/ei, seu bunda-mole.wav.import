@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bs22wfqmnt2ew"
+path="res://.godot/imported/ei, seu bunda-mole.wav-8811db89dd7d3e734f0cfde36e2b280b.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/ei, seu bunda-mole.wav"
+dest_files=["res://.godot/imported/ei, seu bunda-mole.wav-8811db89dd7d3e734f0cfde36e2b280b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,61 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwvej1crl3ru3"]
+
+[ext_resource type="Texture2D" uid="uid://b0gi2nubsce1e" path="res://Assets/Images/Icons/forward.png" id="1_7v0fd"]
+[ext_resource type="Script" path="res://Scripts/card.gd" id="1_52wlt"]
+[ext_resource type="AudioStream" uid="uid://b4dymarlckb57" path="res://Assets/Sounds/Memes/droga, e o bria.wav" id="2_4kmkq"]
+
+[node name="Card" type="ColorRect"]
+custom_minimum_size = Vector2(280, 440)
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+color = Color(0.564706, 0.564706, 0.564706, 1)
+script = ExtResource("1_52wlt")
+audio_name = "Droga é o Brian"
+audio = ExtResource("2_4kmkq")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 48
+alignment = 1
+
+[node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Audio Name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayPauseButton" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("1_7v0fd")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="VolumeSlider" type="HSlider" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="AudioPlayer" type="AudioStreamPlayer2D" parent="."]
+unique_name_in_owner = true
+
+[connection signal="mouse_entered" from="MarginContainer/VBoxContainer/PlayPauseButton" to="." method="_on_play_pause_button_mouse_entered"]
+[connection signal="mouse_exited" from="MarginContainer/VBoxContainer/PlayPauseButton" to="." method="_on_play_pause_button_mouse_exited"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/PlayPauseButton" to="." method="_on_play_pause_button_pressed"]
+[connection signal="finished" from="AudioPlayer" to="." method="_on_audio_player_finished"]

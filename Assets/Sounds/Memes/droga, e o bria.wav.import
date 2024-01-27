@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b4dymarlckb57"
+path="res://.godot/imported/droga, e o bria.wav-e2506904c879baf05fba34d9a1e811bc.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/droga, e o bria.wav"
+dest_files=["res://.godot/imported/droga, e o bria.wav-e2506904c879baf05fba34d9a1e811bc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

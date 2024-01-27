@@ -1,0 +1,295 @@
+[gd_scene load_steps=4 format=3 uid="uid://dm6rwu8dmw7s5"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_88d6p"]
+[ext_resource type="Texture2D" uid="uid://c543epkub6e4t" path="res://Assets/Images/Ui/Temporary/empty.png" id="2_4i78q"]
+[ext_resource type="Texture2D" uid="uid://dn5r72qx5mixl" path="res://Assets/Images/Ui/Temporary/perfil.png" id="3_840ee"]
+
+[node name="CreateRoom" type="Node2D"]
+script = ExtResource("1_88d6p")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.960784, 0.921569, 0.862745, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 48
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 48
+
+[node name="Players" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(596, 0)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/Players"]
+custom_minimum_size = Vector2(0, 900)
+layout_mode = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 48
+
+[node name="PlayersList" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/Players/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 48
+
+[node name="PlayerPanel" type="ColorRect" parent="CanvasLayer/MarginContainer/HBoxContainer/Players/MarginContainer/PlayersList"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+color = Color(0.988235, 0.52549, 0.52549, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/Players/MarginContainer/PlayersList/PlayerPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/Players/MarginContainer/PlayersList/PlayerPanel/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "JOGADOR 1"
+
+[node name="PlayerPanel2" type="ColorRect" parent="CanvasLayer/MarginContainer/HBoxContainer/Players/MarginContainer/PlayersList"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+color = Color(0.992157, 0.733333, 0.447059, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/Players/MarginContainer/PlayersList/PlayerPanel2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/Players/MarginContainer/PlayersList/PlayerPanel2/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "JOGADOR 2"
+
+[node name="PlayerPanel3" type="ColorRect" parent="CanvasLayer/MarginContainer/HBoxContainer/Players/MarginContainer/PlayersList"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+color = Color(0.988235, 0.52549, 0.52549, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/Players/MarginContainer/PlayersList/PlayerPanel3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/Players/MarginContainer/PlayersList/PlayerPanel3/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "JOGADOR 3"
+
+[node name="PlayerPanel4" type="ColorRect" parent="CanvasLayer/MarginContainer/HBoxContainer/Players/MarginContainer/PlayersList"]
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+color = Color(0.992157, 0.733333, 0.447059, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/Players/MarginContainer/PlayersList/PlayerPanel4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/Players/MarginContainer/PlayersList/PlayerPanel4/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "JOGADOR 4"
+
+[node name="Buttons" type="HBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/Players"]
+layout_mode = 2
+theme_override_constants/separation = 48
+alignment = 1
+
+[node name="TextureButton4" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer/Players/Buttons"]
+custom_minimum_size = Vector2(240, 80)
+layout_mode = 2
+size_flags_horizontal = 0
+texture_normal = ExtResource("2_4i78q")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/Players/Buttons/TextureButton4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 16
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/Players/Buttons/TextureButton4/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "Voltar"
+vertical_alignment = 1
+
+[node name="TextureButton5" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer/Players/Buttons"]
+custom_minimum_size = Vector2(240, 80)
+layout_mode = 2
+size_flags_horizontal = 8
+texture_normal = ExtResource("2_4i78q")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/Players/Buttons/TextureButton5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 16
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/Players/Buttons/TextureButton5/MarginContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "Jogar"
+vertical_alignment = 1
+
+[node name="Game" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(1184, 0)
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/Game"]
+custom_minimum_size = Vector2(0, 800)
+layout_mode = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 48
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/Game/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/Game/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 80
+text = "Regras"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/Game/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 36
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+"
+autowrap_mode = 2
+
+[node name="MarginContainer2" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/Game"]
+custom_minimum_size = Vector2(0, 180)
+layout_mode = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/Game/MarginContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Avatar" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer/Game/MarginContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 2
+texture_normal = ExtResource("3_840ee")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Avatar2" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer/Game/MarginContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 2
+texture_normal = ExtResource("3_840ee")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Avatar3" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer/Game/MarginContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 2
+texture_normal = ExtResource("3_840ee")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Avatar4" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer/Game/MarginContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 2
+texture_normal = ExtResource("3_840ee")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Avatar5" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer/Game/MarginContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 2
+texture_normal = ExtResource("3_840ee")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Avatar6" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer/Game/MarginContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 2
+texture_normal = ExtResource("3_840ee")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="Avatar7" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer/Game/MarginContainer2/HBoxContainer"]
+custom_minimum_size = Vector2(140, 140)
+layout_mode = 2
+texture_normal = ExtResource("3_840ee")
+ignore_texture_size = true
+stretch_mode = 5

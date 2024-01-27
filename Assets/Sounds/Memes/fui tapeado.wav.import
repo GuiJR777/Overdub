@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ce1od2ibm10hp"
+path="res://.godot/imported/fui tapeado.wav-47d526177ad1f51456365377c2df7add.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/fui tapeado.wav"
+dest_files=["res://.godot/imported/fui tapeado.wav-47d526177ad1f51456365377c2df7add.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

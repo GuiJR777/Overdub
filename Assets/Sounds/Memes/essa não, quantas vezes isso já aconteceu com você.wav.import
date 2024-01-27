@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://do64tihwrs7ca"
+path="res://.godot/imported/essa não, quantas vezes isso já aconteceu com você.wav-cc6be3cc42d444bd02d55f744a39f545.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/essa não, quantas vezes isso já aconteceu com você.wav"
+dest_files=["res://.godot/imported/essa não, quantas vezes isso já aconteceu com você.wav-cc6be3cc42d444bd02d55f744a39f545.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://gal62yyj7uj8"
+path="res://.godot/imported/obrigado amigo, voce e um amigo.wav-a41b7d37b48dc565ced4fac87f0c1b74.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/obrigado amigo, voce e um amigo.wav"
+dest_files=["res://.godot/imported/obrigado amigo, voce e um amigo.wav-a41b7d37b48dc565ced4fac87f0c1b74.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

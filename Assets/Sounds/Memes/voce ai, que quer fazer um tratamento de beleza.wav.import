@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c1dylcx1ppthi"
+path="res://.godot/imported/voce ai, que quer fazer um tratamento de beleza.wav-684cae21dd6d6d1a95dcbce911f9e95d.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/voce ai, que quer fazer um tratamento de beleza.wav"
+dest_files=["res://.godot/imported/voce ai, que quer fazer um tratamento de beleza.wav-684cae21dd6d6d1a95dcbce911f9e95d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

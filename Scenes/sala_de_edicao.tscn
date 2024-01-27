@@ -1,0 +1,89 @@
+[gd_scene load_steps=6 format=3 uid="uid://df78q31fd02qm"]
+
+[ext_resource type="Script" path="res://Scripts/video_container.gd" id="1_8ibry"]
+[ext_resource type="Texture2D" uid="uid://c543epkub6e4t" path="res://Assets/Images/Ui/Temporary/empty.png" id="1_i5ud0"]
+[ext_resource type="PackedScene" uid="uid://beec41bxjr722" path="res://Scenes/video_player.tscn" id="1_v48mg"]
+[ext_resource type="Texture2D" uid="uid://cmdlltiprx1xb" path="res://Assets/Images/Ui/Temporary/full.png" id="2_rrtcc"]
+[ext_resource type="PackedScene" uid="uid://dwvej1crl3ru3" path="res://Scenes/card.tscn" id="5_tl73k"]
+
+[node name="SalaDeEdicao" type="Node2D"]
+
+[node name="PainelEdicao" type="CanvasLayer" parent="."]
+
+[node name="BackGround" type="ColorRect" parent="PainelEdicao"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.956863, 0.933333, 0.858824, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="PainelEdicao"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 48
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PainelEdicao/MarginContainer"]
+custom_minimum_size = Vector2(1280, 896)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 24
+alignment = 1
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="PainelEdicao/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(48, 750)
+layout_mode = 2
+value = 87.0
+fill_mode = 3
+nine_patch_stretch = true
+texture_under = ExtResource("1_i5ud0")
+texture_progress = ExtResource("2_rrtcc")
+
+[node name="VideoContainer" type="VBoxContainer" parent="PainelEdicao/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(1200, 896)
+layout_mode = 2
+theme_override_constants/separation = 16
+script = ExtResource("1_8ibry")
+
+[node name="VideoStreamPlayer" parent="PainelEdicao/MarginContainer/HBoxContainer/VideoContainer" instance=ExtResource("1_v48mg")]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="CardSpaces" type="HBoxContainer" parent="PainelEdicao/MarginContainer/HBoxContainer/VideoContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(1200, 80)
+layout_mode = 2
+size_flags_vertical = 3
+alignment = 1
+
+[node name="CardsContainer" type="VBoxContainer" parent="PainelEdicao/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(576, 800)
+layout_mode = 2
+alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="PainelEdicao/MarginContainer/HBoxContainer/CardsContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+columns = 2
+
+[node name="Card" parent="PainelEdicao/MarginContainer/HBoxContainer/CardsContainer/GridContainer" instance=ExtResource("5_tl73k")]
+layout_mode = 2
+
+[node name="Card2" parent="PainelEdicao/MarginContainer/HBoxContainer/CardsContainer/GridContainer" instance=ExtResource("5_tl73k")]
+layout_mode = 2
+
+[node name="Card3" parent="PainelEdicao/MarginContainer/HBoxContainer/CardsContainer/GridContainer" instance=ExtResource("5_tl73k")]
+layout_mode = 2
+
+[node name="Card4" parent="PainelEdicao/MarginContainer/HBoxContainer/CardsContainer/GridContainer" instance=ExtResource("5_tl73k")]
+layout_mode = 2
+
+[connection signal="finished" from="PainelEdicao/MarginContainer/HBoxContainer/VideoContainer/VideoStreamPlayer" to="PainelEdicao/MarginContainer/HBoxContainer/VideoContainer" method="_on_video_stream_player_finished"]

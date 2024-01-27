@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b3tda78e3o4nx"
+path="res://.godot/imported/mas que merda ‚ essa.wav-31d1d332cb19eaf0b77c69ce68b2cf5c.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/mas que merda ‚ essa.wav"
+dest_files=["res://.godot/imported/mas que merda ‚ essa.wav-31d1d332cb19eaf0b77c69ce68b2cf5c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

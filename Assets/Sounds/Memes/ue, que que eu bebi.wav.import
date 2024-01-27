@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bsy6ovh00egd0"
+path="res://.godot/imported/ue, que que eu bebi.wav-bb1f7f226fc98d0dca29775591502b5b.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/ue, que que eu bebi.wav"
+dest_files=["res://.godot/imported/ue, que que eu bebi.wav-bb1f7f226fc98d0dca29775591502b5b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
