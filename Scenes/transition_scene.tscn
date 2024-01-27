@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://bm00jhff3cfwv"]
+[gd_scene load_steps=5 format=3 uid="uid://bm00jhff3cfwv"]
 
 [ext_resource type="Texture2D" uid="uid://c543epkub6e4t" path="res://Assets/Images/Ui/Temporary/empty.png" id="1_act7f"]
 [ext_resource type="Script" path="res://Scripts/transition_scene.gd" id="1_ss7gm"]
 [ext_resource type="Texture2D" uid="uid://cmdlltiprx1xb" path="res://Assets/Images/Ui/Temporary/full.png" id="2_2atnk"]
+[ext_resource type="Texture2D" uid="uid://1d20v6vtdfri" path="res://Assets/Images/Ui/Logos.png" id="4_wari3"]
 
 [node name="TransitionScene" type="Control"]
 layout_mode = 3
@@ -37,7 +38,7 @@ theme_override_constants/margin_bottom = 48
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer"]
 layout_mode = 2
 size_flags_horizontal = 8
-size_flags_vertical = 8
+size_flags_vertical = 4
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer/MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
@@ -55,3 +56,10 @@ theme_override_font_sizes/font_size = 36
 text = "0 %"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer"]
+modulate = Color(1, 1, 1, 0.356863)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("4_wari3")

@@ -1,9 +1,37 @@
-[gd_scene load_steps=8 format=3 uid="uid://rklyr31thhis"]
+[gd_scene load_steps=9 format=3 uid="uid://rklyr31thhis"]
 
 [ext_resource type="Texture2D" uid="uid://bqtwe2566yif8" path="res://Assets/Images/Ui/GGJ.png" id="1_3beh8"]
 [ext_resource type="Script" path="res://Scripts/splash_screen.gd" id="1_qests"]
 [ext_resource type="AudioStream" uid="uid://7bwcxtcrykar" path="res://Assets/Sounds/UI/tac.ogg" id="3_ybdax"]
 [ext_resource type="AudioStream" uid="uid://cebvsx0mrilvm" path="res://Assets/Sounds/UI/presenting.ogg" id="4_64bnv"]
+[ext_resource type="AudioStream" uid="uid://dmp0gmokf0j11" path="res://Assets/Sounds/UI/presenting_crys.ogg" id="5_sc4ry"]
+
+[sub_resource type="Animation" id="Animation_wmdd8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/ColorRect/MarginContainer/Presenting:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [""]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/ColorRect/MarginContainer/GGJLogo:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_6u8jd"]
 resource_name = "start_splash"
@@ -116,33 +144,21 @@ tracks/2/keys = {
 "times": PackedFloat32Array(0.31, 0.48, 0.64, 0.81, 0.98, 1.14, 1.3, 1.47, 1.64, 1.81, 1.98, 2.14, 2.31, 2.48, 2.64, 2.8, 2.97, 3.39)
 }
 tracks/2/use_blend = true
-
-[sub_resource type="Animation" id="Animation_wmdd8"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("CanvasLayer/ColorRect/MarginContainer/Presenting:text")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [""]
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CrysVoice")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_sc4ry")
+}],
+"times": PackedFloat32Array(3.43)
 }
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("CanvasLayer/ColorRect/MarginContainer/GGJLogo:modulate")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Color(1, 1, 1, 0)]
-}
+tracks/3/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2711l"]
 _data = {
@@ -203,5 +219,7 @@ libraries = {
 }
 
 [node name="RamiresVoice" type="AudioStreamPlayer" parent="."]
+
+[node name="CrysVoice" type="AudioStreamPlayer" parent="."]
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
