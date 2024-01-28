@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=3 uid="uid://cw6asnjm7jv81"]
+
+[ext_resource type="Script" path="res://Scripts/player_panel.gd" id="1_lxsuo"]
+[ext_resource type="Texture2D" uid="uid://dn5r72qx5mixl" path="res://Assets/Images/Ui/Temporary/perfil.png" id="2_3mg26"]
+
+[node name="PlayerPanel" type="ColorRect"]
+custom_minimum_size = Vector2(500, 120)
+color = Color(0.0666667, 0.521569, 0.701961, 1)
+script = ExtResource("1_lxsuo")
+player_nick_name = "Teste"
+player_color = Color(0, 0.701961, 0.635294, 1)
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 16
+theme_override_constants/margin_top = 16
+theme_override_constants/margin_right = 16
+theme_override_constants/margin_bottom = 16
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="PlayerNickNameLabel" type="Label" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(392, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 48
+text = "JOGADOR 1"
+
+[node name="PlayerImage" type="TextureRect" parent="MarginContainer/HBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture = ExtResource("2_3mg26")
+expand_mode = 1
+stretch_mode = 5

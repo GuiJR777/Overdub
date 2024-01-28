@@ -20,6 +20,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 ScenesManager="*res://Scripts/SingleTons/scenes_manager.gd"
+GameManager="*res://Scripts/SingleTons/game_manager.gd"
+Networking="*res://Scripts/SingleTons/networking.gd"
 
 [display]
 

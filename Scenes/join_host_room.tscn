@@ -1,0 +1,232 @@
+[gd_scene load_steps=7 format=3 uid="uid://cvmj0nsbxj8qt"]
+
+[ext_resource type="Script" path="res://Scripts/join_host_room.gd" id="1_pc0y0"]
+[ext_resource type="Texture2D" uid="uid://unmmfqtg44ck" path="res://Assets/Images/Ui/Temporary/color_texture.png" id="1_t01ph"]
+[ext_resource type="Texture2D" uid="uid://bkwt1d8oehcga" path="res://Assets/Images/UI/OVERDUR-B1 sem borda.png" id="2_2mnnm"]
+[ext_resource type="Texture2D" uid="uid://87ra7ebnyrvy" path="res://Assets/Images/Icons/exitLeft.png" id="2_2tvlj"]
+[ext_resource type="PackedScene" uid="uid://b06nk681k1ij7" path="res://Scenes/transition.tscn" id="2_axxx6"]
+[ext_resource type="PackedScene" uid="uid://cx6s1msd1itei" path="res://Scenes/warning_label.tscn" id="3_rc6x6"]
+
+[node name="JoinHostRoom" type="Node2D"]
+script = ExtResource("1_pc0y0")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BG" type="TextureRect" parent="CanvasLayer"]
+offset_right = 1920.0
+offset_bottom = 1080.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_2mnnm")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 48
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 48
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="HostButton" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+texture_normal = ExtResource("1_t01ph")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/HostButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/HostButton/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Criar Sala"
+vertical_alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 48
+
+[node name="QuestionIp" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/QuestionIp"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "IP da Sala"
+
+[node name="IpInput" type="TextEdit" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/QuestionIp"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "127.0.0.1"
+placeholder_text = "127.0.0.1"
+
+[node name="ShowIp" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/ShowIp"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Use esse IP para se conectar:"
+horizontal_alignment = 1
+
+[node name="IpToConnect" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/ShowIp"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "127.0.0.1"
+horizontal_alignment = 1
+
+[node name="Q&A2" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/Q&A2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Nickname"
+
+[node name="PlayerNickNameInput" type="TextEdit" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/Q&A2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+placeholder_text = "Jogador 1"
+
+[node name="WarningLabel" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer" instance=ExtResource("3_rc6x6")]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+
+[node name="ClientButton" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+texture_normal = ExtResource("1_t01ph")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer2/ClientButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer2/ClientButton/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Entrar em uma Sala"
+vertical_alignment = 1
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 48
+alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer3"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer3/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 32
+text = "Jogadores Conectados"
+vertical_alignment = 1
+
+[node name="PlayersList" type="ItemList" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer3/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_font_sizes/font_size = 48
+
+[node name="StartButton" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer3"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+texture_normal = ExtResource("1_t01ph")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer3/StartButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer3/StartButton/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Começar Jogo"
+vertical_alignment = 1
+
+[node name="BackButton" type="TextureButton" parent="CanvasLayer/MarginContainer"]
+modulate = Color(0.988235, 0.52549, 0.52549, 1)
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource("2_2tvlj")
+
+[node name="Transition" parent="." instance=ExtResource("2_axxx6")]
+transiction_type = 2
+
+[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/HostButton" to="." method="_on_host_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer2/ClientButton" to="." method="_on_client_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer3/StartButton" to="." method="_on_start_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/MarginContainer/BackButton" to="." method="_on_back_button_pressed"]

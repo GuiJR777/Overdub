@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://df78q31fd02qm"]
+[gd_scene load_steps=7 format=3 uid="uid://df78q31fd02qm"]
 
-[ext_resource type="Script" path="res://Scripts/video_container.gd" id="1_8ibry"]
-[ext_resource type="Texture2D" uid="uid://c543epkub6e4t" path="res://Assets/Images/Ui/Temporary/empty.png" id="1_i5ud0"]
-[ext_resource type="PackedScene" uid="uid://beec41bxjr722" path="res://Scenes/video_player.tscn" id="1_v48mg"]
-[ext_resource type="Texture2D" uid="uid://cmdlltiprx1xb" path="res://Assets/Images/Ui/Temporary/full.png" id="2_rrtcc"]
-[ext_resource type="PackedScene" uid="uid://dwvej1crl3ru3" path="res://Scenes/card.tscn" id="5_tl73k"]
+[ext_resource type="Script" path="res://Scripts/edition_room.gd" id="1_41dj3"]
+[ext_resource type="Texture2D" uid="uid://c543epkub6e4t" path="res://Assets/Images/Ui/Temporary/empty.png" id="2_joomy"]
+[ext_resource type="Texture2D" uid="uid://cmdlltiprx1xb" path="res://Assets/Images/Ui/Temporary/full.png" id="3_h2psk"]
+[ext_resource type="Script" path="res://Scripts/video_container.gd" id="4_1uej8"]
+[ext_resource type="PackedScene" uid="uid://beec41bxjr722" path="res://Scenes/video_player.tscn" id="5_2jcsu"]
+[ext_resource type="PackedScene" uid="uid://dwvej1crl3ru3" path="res://Scenes/card.tscn" id="6_msgab"]
 
-[node name="SalaDeEdicao" type="Node2D"]
+[node name="EditionRoom" type="Node2D"]
+script = ExtResource("1_41dj3")
 
 [node name="PainelEdicao" type="CanvasLayer" parent="."]
 
@@ -42,16 +44,16 @@ layout_mode = 2
 value = 87.0
 fill_mode = 3
 nine_patch_stretch = true
-texture_under = ExtResource("1_i5ud0")
-texture_progress = ExtResource("2_rrtcc")
+texture_under = ExtResource("2_joomy")
+texture_progress = ExtResource("3_h2psk")
 
 [node name="VideoContainer" type="VBoxContainer" parent="PainelEdicao/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(1200, 896)
 layout_mode = 2
 theme_override_constants/separation = 16
-script = ExtResource("1_8ibry")
+script = ExtResource("4_1uej8")
 
-[node name="VideoStreamPlayer" parent="PainelEdicao/MarginContainer/HBoxContainer/VideoContainer" instance=ExtResource("1_v48mg")]
+[node name="VideoStreamPlayer" parent="PainelEdicao/MarginContainer/HBoxContainer/VideoContainer" instance=ExtResource("5_2jcsu")]
 unique_name_in_owner = true
 layout_mode = 2
 
@@ -74,16 +76,16 @@ theme_override_constants/h_separation = 16
 theme_override_constants/v_separation = 16
 columns = 2
 
-[node name="Card" parent="PainelEdicao/MarginContainer/HBoxContainer/CardsContainer/GridContainer" instance=ExtResource("5_tl73k")]
+[node name="Card" parent="PainelEdicao/MarginContainer/HBoxContainer/CardsContainer/GridContainer" instance=ExtResource("6_msgab")]
 layout_mode = 2
 
-[node name="Card2" parent="PainelEdicao/MarginContainer/HBoxContainer/CardsContainer/GridContainer" instance=ExtResource("5_tl73k")]
+[node name="Card2" parent="PainelEdicao/MarginContainer/HBoxContainer/CardsContainer/GridContainer" instance=ExtResource("6_msgab")]
 layout_mode = 2
 
-[node name="Card3" parent="PainelEdicao/MarginContainer/HBoxContainer/CardsContainer/GridContainer" instance=ExtResource("5_tl73k")]
+[node name="Card3" parent="PainelEdicao/MarginContainer/HBoxContainer/CardsContainer/GridContainer" instance=ExtResource("6_msgab")]
 layout_mode = 2
 
-[node name="Card4" parent="PainelEdicao/MarginContainer/HBoxContainer/CardsContainer/GridContainer" instance=ExtResource("5_tl73k")]
+[node name="Card4" parent="PainelEdicao/MarginContainer/HBoxContainer/CardsContainer/GridContainer" instance=ExtResource("6_msgab")]
 layout_mode = 2
 
 [connection signal="finished" from="PainelEdicao/MarginContainer/HBoxContainer/VideoContainer/VideoStreamPlayer" to="PainelEdicao/MarginContainer/HBoxContainer/VideoContainer" method="_on_video_stream_player_finished"]

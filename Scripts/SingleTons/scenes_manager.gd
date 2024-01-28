@@ -3,8 +3,10 @@ extends Node
 
 @onready var transition_scene: PackedScene = preload("res://Scenes/transition_scene.tscn")
 
-const MAIN_MENU = "res://Scenes/main_menu.tscn"
 const SPLASH_SCREEN = "res://Scenes/splash_screen.tscn"
+const MAIN_MENU = "res://Scenes/main_menu.tscn"
+const JOIN_HOST_ROOM = "res://Scenes/join_host_room.tscn"
+const GAME_ROOM = "res://Scenes/game_room.tscn"
 
 var scene_to_transition: String
 

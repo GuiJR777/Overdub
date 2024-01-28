@@ -1,10 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://rklyr31thhis"]
+[gd_scene load_steps=12 format=3 uid="uid://rklyr31thhis"]
 
 [ext_resource type="Texture2D" uid="uid://bqtwe2566yif8" path="res://Assets/Images/Ui/GGJ.png" id="1_3beh8"]
 [ext_resource type="Script" path="res://Scripts/splash_screen.gd" id="1_qests"]
 [ext_resource type="AudioStream" uid="uid://7bwcxtcrykar" path="res://Assets/Sounds/UI/tac.ogg" id="3_ybdax"]
 [ext_resource type="AudioStream" uid="uid://cebvsx0mrilvm" path="res://Assets/Sounds/UI/presenting.ogg" id="4_64bnv"]
 [ext_resource type="AudioStream" uid="uid://dmp0gmokf0j11" path="res://Assets/Sounds/UI/presenting_crys.ogg" id="5_sc4ry"]
+[ext_resource type="AudioStream" uid="uid://dxkwvelo0e36n" path="res://Assets/Sounds/UI/presentation_ste_1.mp3" id="6_bvy8i"]
+[ext_resource type="AudioStream" uid="uid://f7e4khxojqjf" path="res://Assets/Sounds/UI/presentation_ste_2.mp3" id="7_85xy4"]
+[ext_resource type="AudioStream" uid="uid://dku3vui60bq26" path="res://Assets/Sounds/UI/presentation_gaspar.ogg" id="8_ok88f"]
 
 [sub_resource type="Animation" id="Animation_wmdd8"]
 length = 0.001
@@ -35,7 +38,7 @@ tracks/1/keys = {
 
 [sub_resource type="Animation" id="Animation_6u8jd"]
 resource_name = "start_splash"
-length = 6.0
+length = 6.5
 step = 0.01
 tracks/0/type = "value"
 tracks/0/imported = false
@@ -159,6 +162,51 @@ tracks/3/keys = {
 "times": PackedFloat32Array(3.43)
 }
 tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SteVoice")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6_bvy8i")
+}],
+"times": PackedFloat32Array(3.13)
+}
+tracks/4/use_blend = true
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SteVoice2")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("7_85xy4")
+}],
+"times": PackedFloat32Array(2.84)
+}
+tracks/5/use_blend = true
+tracks/6/type = "audio"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("GasparVoice")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("8_ok88f")
+}],
+"times": PackedFloat32Array(3.47)
+}
+tracks/6/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2711l"]
 _data = {
@@ -221,5 +269,11 @@ libraries = {
 [node name="RamiresVoice" type="AudioStreamPlayer" parent="."]
 
 [node name="CrysVoice" type="AudioStreamPlayer" parent="."]
+
+[node name="SteVoice" type="AudioStreamPlayer" parent="."]
+
+[node name="SteVoice2" type="AudioStreamPlayer" parent="."]
+
+[node name="GasparVoice" type="AudioStreamPlayer" parent="."]
 
 [connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
