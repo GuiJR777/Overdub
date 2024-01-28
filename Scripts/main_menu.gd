@@ -5,13 +5,9 @@ extends Node2D
 var peer: ENetMultiplayerPeer
 
 
-func _ready() -> void:
-	pass # Replace with function body.
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func start_music() -> void:
+	audio_stream_player.play()
 
 
 func _on_audio_stream_player_finished() -> void:

@@ -1,7 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://rklyr31thhis"]
+[gd_scene load_steps=13 format=3 uid="uid://rklyr31thhis"]
 
-[ext_resource type="Texture2D" uid="uid://bqtwe2566yif8" path="res://Assets/Images/Ui/GGJ.png" id="1_3beh8"]
+[ext_resource type="Texture2D" uid="uid://bqtwe2566yif8" path="res://Assets/Images/UI/GGJ.png" id="1_3beh8"]
 [ext_resource type="Script" path="res://Scripts/splash_screen.gd" id="1_qests"]
+[ext_resource type="FontFile" uid="uid://bntwthoihx7p3" path="res://Assets/Fonts/Storyboo.TTF" id="2_t6f4p"]
 [ext_resource type="AudioStream" uid="uid://7bwcxtcrykar" path="res://Assets/Sounds/UI/tac.ogg" id="3_ybdax"]
 [ext_resource type="AudioStream" uid="uid://cebvsx0mrilvm" path="res://Assets/Sounds/UI/presenting.ogg" id="4_64bnv"]
 [ext_resource type="AudioStream" uid="uid://dmp0gmokf0j11" path="res://Assets/Sounds/UI/presenting_crys.ogg" id="5_sc4ry"]
@@ -249,6 +250,7 @@ theme_override_constants/margin_bottom = 48
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_t6f4p")
 theme_override_font_sizes/font_size = 48
 horizontal_alignment = 1
 vertical_alignment = 1

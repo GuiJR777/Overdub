@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://b75mgc4db05n2"]
+[gd_scene load_steps=5 format=3 uid="uid://b75mgc4db05n2"]
 
 [ext_resource type="Texture2D" uid="uid://bkwt1d8oehcga" path="res://Assets/Images/UI/OVERDUR-B1 sem borda.png" id="1_icpbw"]
-[ext_resource type="Texture2D" uid="uid://c543epkub6e4t" path="res://Assets/Images/Ui/Temporary/empty.png" id="1_stvbu"]
-[ext_resource type="Texture2D" uid="uid://c2fqak1wxrm86" path="res://Assets/Images/Icons/gear.png" id="2_q417r"]
+[ext_resource type="Texture2D" uid="uid://bpefh2efiobqc" path="res://Assets/Images/UI/logo_2.png" id="2_ifo8o"]
 [ext_resource type="PackedScene" uid="uid://b06nk681k1ij7" path="res://Scenes/transition.tscn" id="3_60d18"]
 [ext_resource type="AudioStream" uid="uid://bmaf5al62hlcc" path="res://Assets/Sounds/UI/menu.mp3" id="4_3mqlb"]
 
@@ -19,7 +18,6 @@ grow_vertical = 2
 texture = ExtResource("1_icpbw")
 
 [node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
-visible = false
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -30,115 +28,13 @@ theme_override_constants/margin_top = 48
 theme_override_constants/margin_right = 48
 theme_override_constants/margin_bottom = 48
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer"]
-layout_mode = 2
-theme_override_constants/separation = 48
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 48
-theme_override_constants/margin_top = 48
-theme_override_constants/margin_right = 48
-theme_override_constants/margin_bottom = 48
-
-[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/MarginContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 80
-text = "OVER
-         DUB"
-
-[node name="StartButton" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(240, 80)
-layout_mode = 2
-texture_normal = ExtResource("1_stvbu")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/StartButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 48
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 48
-theme_override_constants/margin_bottom = 16
-
-[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/StartButton/MarginContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
-text = "Jogar"
-vertical_alignment = 1
-
-[node name="CreditsButton" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(240, 80)
-layout_mode = 2
-texture_normal = ExtResource("1_stvbu")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/CreditsButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 48
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 48
-theme_override_constants/margin_bottom = 16
-
-[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/CreditsButton/MarginContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
-text = "Créditos"
-vertical_alignment = 1
-
-[node name="ExitButton" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
-custom_minimum_size = Vector2(240, 80)
-layout_mode = 2
-texture_normal = ExtResource("1_stvbu")
-ignore_texture_size = true
-stretch_mode = 0
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/ExitButton"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 48
-theme_override_constants/margin_top = 16
-theme_override_constants/margin_right = 48
-theme_override_constants/margin_bottom = 16
-
-[node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/ExitButton/MarginContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 36
-text = "Sair"
-vertical_alignment = 1
-
-[node name="TextureButton" type="TextureButton" parent="CanvasLayer/MarginContainer"]
-modulate = Color(0.988235, 0.52549, 0.52549, 1)
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
-size_flags_horizontal = 8
+size_flags_horizontal = 4
 size_flags_vertical = 0
-texture_normal = ExtResource("2_q417r")
-ignore_texture_size = true
-stretch_mode = 5
+texture = ExtResource("2_ifo8o")
+expand_mode = 1
 
 [node name="Transition" parent="." instance=ExtResource("3_60d18")]
 
@@ -147,6 +43,4 @@ unique_name_in_owner = true
 stream = ExtResource("4_3mqlb")
 autoplay = true
 
-[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/StartButton" to="." method="_on_start_button_pressed" flags=18]
-[connection signal="pressed" from="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/ExitButton" to="." method="_on_exit_button_pressed" flags=18]
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished" flags=18]

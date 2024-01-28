@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://cvmj0nsbxj8qt"]
+[gd_scene load_steps=8 format=3 uid="uid://cvmj0nsbxj8qt"]
 
 [ext_resource type="Script" path="res://Scripts/join_host_room.gd" id="1_pc0y0"]
 [ext_resource type="Texture2D" uid="uid://unmmfqtg44ck" path="res://Assets/Images/Ui/Temporary/color_texture.png" id="1_t01ph"]
@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://87ra7ebnyrvy" path="res://Assets/Images/Icons/exitLeft.png" id="2_2tvlj"]
 [ext_resource type="PackedScene" uid="uid://b06nk681k1ij7" path="res://Scenes/transition.tscn" id="2_axxx6"]
 [ext_resource type="PackedScene" uid="uid://cx6s1msd1itei" path="res://Scenes/warning_label.tscn" id="3_rc6x6"]
+[ext_resource type="FontFile" uid="uid://bntwthoihx7p3" path="res://Assets/Fonts/Storyboo.TTF" id="4_wbska"]
 
 [node name="JoinHostRoom" type="Node2D"]
 script = ExtResource("1_pc0y0")
@@ -62,6 +63,7 @@ theme_override_constants/margin_bottom = 8
 
 [node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer/HostButton/MarginContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_wbska")
 theme_override_font_sizes/font_size = 32
 text = "Criar Sala"
 vertical_alignment = 1
@@ -84,6 +86,7 @@ theme_override_constants/separation = 8
 [node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/QuestionIp"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_wbska")
 theme_override_font_sizes/font_size = 32
 text = "IP da Sala"
 
@@ -91,6 +94,7 @@ text = "IP da Sala"
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_wbska")
 theme_override_font_sizes/font_size = 24
 text = "127.0.0.1"
 placeholder_text = "127.0.0.1"
@@ -123,6 +127,7 @@ theme_override_constants/separation = 8
 [node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer/Q&A2"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_wbska")
 theme_override_font_sizes/font_size = 32
 text = "Nickname"
 
@@ -130,6 +135,7 @@ text = "Nickname"
 unique_name_in_owner = true
 custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_wbska")
 theme_override_font_sizes/font_size = 24
 placeholder_text = "Jogador 1"
 
@@ -160,6 +166,7 @@ theme_override_constants/margin_bottom = 8
 
 [node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer2/ClientButton/MarginContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_wbska")
 theme_override_font_sizes/font_size = 32
 text = "Entrar em uma Sala"
 vertical_alignment = 1
@@ -178,6 +185,7 @@ theme_override_constants/separation = 8
 [node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer3/VBoxContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_wbska")
 theme_override_font_sizes/font_size = 32
 text = "Jogadores Conectados"
 vertical_alignment = 1
@@ -187,6 +195,7 @@ unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("4_wbska")
 theme_override_font_sizes/font_size = 48
 
 [node name="StartButton" type="TextureButton" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer3"]
@@ -211,6 +220,7 @@ theme_override_constants/margin_bottom = 8
 
 [node name="Label" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer3/StartButton/MarginContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("4_wbska")
 theme_override_font_sizes/font_size = 32
 text = "Começar Jogo"
 vertical_alignment = 1
