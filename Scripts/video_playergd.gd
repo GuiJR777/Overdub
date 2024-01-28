@@ -36,8 +36,7 @@ func seconds_to_minutes_seconds(seconds: float) -> String:
 	return minutes_str + ":" + seconds_str
 
 
-
-func _on_play_pause_button_pressed() -> void:
+func start_video() -> void:
 	if not is_playing():
 		play()
 		bg.hide()
@@ -50,6 +49,10 @@ func _on_play_pause_button_pressed() -> void:
 		set_paused(false)
 		play_pause_button.texture_normal = PAUSE_BUTTON_ICON
 
+
+
+func _on_play_pause_button_pressed() -> void:
+	start_video()
 
 func _on_play_pause_button_mouse_entered() -> void:
 	play_pause_button.modulate = Color.DIM_GRAY

@@ -15,13 +15,14 @@ run/main_scene="res://Scenes/splash_screen.tscn"
 config/features=PackedStringArray("4.1", "Forward Plus")
 boot_splash/bg_color=Color(0.960784, 0.921569, 0.862745, 1)
 boot_splash/image="res://Assets/Images/Ui/logo_2.png"
-config/icon="res://icon.svg"
+config/icon="res://Assets/Images/UI/logo_2.png"
 
 [autoload]
 
 ScenesManager="*res://Scripts/SingleTons/scenes_manager.gd"
 GameManager="*res://Scripts/SingleTons/game_manager.gd"
 Networking="*res://Scripts/SingleTons/networking.gd"
+ResourcesManager="*res://Scripts/resources_manager.gd"
 
 [display]
 

@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://dwvej1crl3ru3"]
+[gd_scene load_steps=5 format=3 uid="uid://dwvej1crl3ru3"]
 
 [ext_resource type="Texture2D" uid="uid://b0gi2nubsce1e" path="res://Assets/Images/Icons/forward.png" id="1_7v0fd"]
 [ext_resource type="Script" path="res://Scripts/card.gd" id="1_52wlt"]
 [ext_resource type="AudioStream" uid="uid://b4dymarlckb57" path="res://Assets/Sounds/Memes/droga, e o bria.wav" id="2_4kmkq"]
+[ext_resource type="FontFile" uid="uid://bntwthoihx7p3" path="res://Assets/Fonts/Storyboo.TTF" id="3_kbwp5"]
 
 [node name="Card" type="ColorRect"]
 custom_minimum_size = Vector2(280, 440)
@@ -36,9 +37,11 @@ alignment = 1
 unique_name_in_owner = true
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_kbwp5")
 text = "Audio Name"
 horizontal_alignment = 1
 vertical_alignment = 1
+autowrap_mode = 2
 
 [node name="PlayPauseButton" type="TextureButton" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
