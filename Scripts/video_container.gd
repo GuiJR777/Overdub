@@ -12,4 +12,5 @@ func _on_big_screen_finished() -> void:
 	for second in int(video_stream_player.total_video_duration):
 		var instance = card_space_scene.instantiate() as CardSpace
 		instance.value = second
+		instance.has_audio.connect(video_stream_player.add_audio)
 		card_spaces.add_child(instance)

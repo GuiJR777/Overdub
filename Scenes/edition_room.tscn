@@ -1,23 +1,24 @@
-[gd_scene load_steps=6 format=3 uid="uid://df78q31fd02qm"]
+[gd_scene load_steps=8 format=3 uid="uid://df78q31fd02qm"]
 
 [ext_resource type="Script" path="res://Scripts/edition_room.gd" id="1_41dj3"]
 [ext_resource type="Texture2D" uid="uid://c543epkub6e4t" path="res://Assets/Images/UI/Temporary/empty.png" id="2_joomy"]
-[ext_resource type="Texture2D" uid="uid://cmdlltiprx1xb" path="res://Assets/Images/UI/Temporary/full.png" id="3_h2psk"]
+[ext_resource type="Texture2D" uid="uid://bkwt1d8oehcga" path="res://Assets/Images/UI/OVERDUR-B1 sem borda.png" id="2_mxlel"]
 [ext_resource type="Script" path="res://Scripts/video_container.gd" id="4_1uej8"]
 [ext_resource type="PackedScene" uid="uid://beec41bxjr722" path="res://Scenes/video_player.tscn" id="5_2jcsu"]
+[ext_resource type="Texture2D" uid="uid://unmmfqtg44ck" path="res://Assets/Images/UI/Temporary/color_texture.png" id="6_8pibl"]
+[ext_resource type="FontFile" uid="uid://bntwthoihx7p3" path="res://Assets/Fonts/Storyboo.TTF" id="7_vbin3"]
 
 [node name="EditionRoom" type="Node2D"]
 script = ExtResource("1_41dj3")
 
 [node name="PainelEdicao" type="CanvasLayer" parent="."]
 
-[node name="BackGround" type="ColorRect" parent="PainelEdicao"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+[node name="BG" type="TextureRect" parent="PainelEdicao"]
+offset_right = 1920.0
+offset_bottom = 1080.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.956863, 0.933333, 0.858824, 1)
+texture = ExtResource("2_mxlel")
 
 [node name="MarginContainer" type="MarginContainer" parent="PainelEdicao"]
 anchors_preset = 15
@@ -39,14 +40,15 @@ size_flags_vertical = 4
 theme_override_constants/separation = 24
 alignment = 1
 
-[node name="TextureProgressBar" type="TextureProgressBar" parent="PainelEdicao/MarginContainer/Editor"]
+[node name="TimeProgress" type="TextureProgressBar" parent="PainelEdicao/MarginContainer/Editor"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(48, 750)
 layout_mode = 2
 value = 87.0
 fill_mode = 3
 nine_patch_stretch = true
 texture_under = ExtResource("2_joomy")
-texture_progress = ExtResource("3_h2psk")
+texture_progress = ExtResource("6_8pibl")
 
 [node name="VideoContainer" type="VBoxContainer" parent="PainelEdicao/MarginContainer/Editor"]
 custom_minimum_size = Vector2(1200, 896)
@@ -78,11 +80,39 @@ theme_override_constants/h_separation = 16
 theme_override_constants/v_separation = 16
 columns = 2
 
+[node name="FinishButton" type="TextureButton" parent="PainelEdicao/MarginContainer/Editor/CardsContainer"]
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+texture_normal = ExtResource("6_8pibl")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="PainelEdicao/MarginContainer/Editor/CardsContainer/FinishButton"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 8
+
+[node name="Label" type="Label" parent="PainelEdicao/MarginContainer/Editor/CardsContainer/FinishButton/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+theme_override_fonts/font = ExtResource("7_vbin3")
+theme_override_font_sizes/font_size = 48
+text = "Terminar"
+vertical_alignment = 1
+
 [node name="BigScreen" parent="PainelEdicao/MarginContainer" instance=ExtResource("5_2jcsu")]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 1
 size_flags_vertical = 1
 
+[connection signal="pressed" from="PainelEdicao/MarginContainer/Editor/CardsContainer/FinishButton" to="." method="_on_finish_button_pressed"]
 [connection signal="finished" from="PainelEdicao/MarginContainer/BigScreen" to="." method="_on_big_screen_finished"]
 [connection signal="finished" from="PainelEdicao/MarginContainer/BigScreen" to="PainelEdicao/MarginContainer/Editor/VideoContainer" method="_on_big_screen_finished"]

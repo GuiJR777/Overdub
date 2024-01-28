@@ -1,0 +1,70 @@
+[gd_scene load_steps=4 format=3 uid="uid://ikaof08j3wcg"]
+
+[ext_resource type="Script" path="res://Scripts/voting_video_container.gd" id="1_c3p0p"]
+[ext_resource type="PackedScene" uid="uid://beec41bxjr722" path="res://Scenes/video_player.tscn" id="1_qqvjs"]
+[ext_resource type="Texture2D" uid="uid://btfvmjp6nc2gd" path="res://Assets/Images/Icons/star.png" id="2_rfsco"]
+
+[node name="VotingVideo" type="VBoxContainer"]
+size_flags_horizontal = 3
+theme_override_constants/separation = 16
+alignment = 1
+script = ExtResource("1_c3p0p")
+
+[node name="PlayerNickNameLabel" type="Label" parent="."]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 16
+text = "Jogador 1"
+horizontal_alignment = 1
+
+[node name="Rated" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="TextureButton" type="TextureButton" parent="Rated"]
+modulate = Color(0.988235, 0.52549, 0.52549, 1)
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture_normal = ExtResource("2_rfsco")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton2" type="TextureButton" parent="Rated"]
+modulate = Color(0.501961, 0.501961, 0.501961, 1)
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture_normal = ExtResource("2_rfsco")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton3" type="TextureButton" parent="Rated"]
+modulate = Color(0.501961, 0.501961, 0.501961, 1)
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture_normal = ExtResource("2_rfsco")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton4" type="TextureButton" parent="Rated"]
+modulate = Color(0.501961, 0.501961, 0.501961, 1)
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture_normal = ExtResource("2_rfsco")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="TextureButton5" type="TextureButton" parent="Rated"]
+modulate = Color(0.501961, 0.501961, 0.501961, 1)
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+texture_normal = ExtResource("2_rfsco")
+ignore_texture_size = true
+stretch_mode = 5
+
+[node name="VideoStreamPlayer" parent="." instance=ExtResource("1_qqvjs")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(512, 288)
+layout_mode = 2
+size_flags_horizontal = 1
+size_flags_vertical = 3

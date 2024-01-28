@@ -1,10 +1,73 @@
-[gd_scene load_steps=6 format=3 uid="uid://b75mgc4db05n2"]
+[gd_scene load_steps=11 format=3 uid="uid://b75mgc4db05n2"]
 
 [ext_resource type="Texture2D" uid="uid://bkwt1d8oehcga" path="res://Assets/Images/UI/OVERDUR-B1 sem borda.png" id="1_icpbw"]
 [ext_resource type="Script" path="res://Scripts/game_room.gd" id="1_lbift"]
 [ext_resource type="Texture2D" uid="uid://bpefh2efiobqc" path="res://Assets/Images/UI/logo_2.png" id="2_ifo8o"]
 [ext_resource type="PackedScene" uid="uid://b06nk681k1ij7" path="res://Scenes/transition.tscn" id="3_60d18"]
 [ext_resource type="AudioStream" uid="uid://bmaf5al62hlcc" path="res://Assets/Sounds/UI/menu.mp3" id="4_3mqlb"]
+[ext_resource type="FontFile" uid="uid://bntwthoihx7p3" path="res://Assets/Fonts/Storyboo.TTF" id="4_btm34"]
+[ext_resource type="PackedScene" uid="uid://c72c6lbi4ybtb" path="res://Scenes/voting_room.tscn" id="7_polmc"]
+
+[sub_resource type="Animation" id="Animation_su7k1"]
+resource_name = "countdown"
+length = 6.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/MarginContainer/CountDownLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2, 3, 4, 5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": ["5", "4", "3", "2", "1", "GO"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/MarginContainer/CountDownLabel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 5.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_s6vrw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CanvasLayer/MarginContainer/CountDownLabel:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["5"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CanvasLayer/MarginContainer/CountDownLabel:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_wpyvs"]
+_data = {
+"RESET": SubResource("Animation_s6vrw"),
+"countdown": SubResource("Animation_su7k1")
+}
 
 [node name="GameRoom" type="Node2D"]
 script = ExtResource("1_lbift")
@@ -30,6 +93,10 @@ theme_override_constants/margin_top = 48
 theme_override_constants/margin_right = 48
 theme_override_constants/margin_bottom = 48
 
+[node name="VotingRoom" parent="CanvasLayer/MarginContainer" instance=ExtResource("7_polmc")]
+unique_name_in_owner = true
+layout_mode = 2
+
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer"]
 custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
@@ -38,12 +105,16 @@ size_flags_vertical = 0
 texture = ExtResource("2_ifo8o")
 expand_mode = 1
 
-[node name="DebugLabel" type="Label" parent="CanvasLayer/MarginContainer"]
+[node name="CountDownLabel" type="Label" parent="CanvasLayer/MarginContainer"]
+unique_name_in_owner = true
 layout_mode = 2
 size_flags_horizontal = 4
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 64
-text = "DEBUG"
+theme_override_colors/font_color = Color(0.988235, 0.52549, 0.52549, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 12
+theme_override_fonts/font = ExtResource("4_btm34")
+theme_override_font_sizes/font_size = 200
+text = "5"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -55,5 +126,10 @@ stream = ExtResource("4_3mqlb")
 
 [node name="PlayersNode" type="Node2D" parent="."]
 unique_name_in_owner = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_wpyvs")
+}
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished" flags=18]

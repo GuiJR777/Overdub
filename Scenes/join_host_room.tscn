@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://cvmj0nsbxj8qt"]
 
 [ext_resource type="Script" path="res://Scripts/join_host_room.gd" id="1_pc0y0"]
-[ext_resource type="Texture2D" uid="uid://unmmfqtg44ck" path="res://Assets/Images/Ui/Temporary/color_texture.png" id="1_t01ph"]
+[ext_resource type="Texture2D" uid="uid://unmmfqtg44ck" path="res://Assets/Images/UI/Temporary/color_texture.png" id="1_t01ph"]
 [ext_resource type="Texture2D" uid="uid://bkwt1d8oehcga" path="res://Assets/Images/UI/OVERDUR-B1 sem borda.png" id="2_2mnnm"]
 [ext_resource type="Texture2D" uid="uid://87ra7ebnyrvy" path="res://Assets/Images/Icons/exitLeft.png" id="2_2tvlj"]
 [ext_resource type="PackedScene" uid="uid://b06nk681k1ij7" path="res://Scenes/transition.tscn" id="2_axxx6"]
@@ -137,6 +137,7 @@ custom_minimum_size = Vector2(0, 48)
 layout_mode = 2
 theme_override_fonts/font = ExtResource("4_wbska")
 theme_override_font_sizes/font_size = 24
+text = "J1"
 placeholder_text = "Jogador 1"
 
 [node name="WarningLabel" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer2/VBoxContainer" instance=ExtResource("3_rc6x6")]

@@ -13,6 +13,7 @@ class_name JoinHostRoom
 @onready var ip_to_connect: Label = %IpToConnect
 @onready var start_button: TextureButton = %StartButton
 
+var player_reference: Player
 
 func _ready() -> void:
 	Networking.player_list_updated.connect(update_players_list)
@@ -58,6 +59,8 @@ func is_valid_ip() -> bool:
 func disable_buttons():
 	host_button.disabled = true
 	client_button.disabled = true
+	host_button.hide()
+	client_button.hide()
 
 func server_created():
 	warning_label.show_success("Servidor criado com sucesso!")

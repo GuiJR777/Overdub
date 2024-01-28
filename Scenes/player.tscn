@@ -1,6 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bsyu4o6ot57nb"]
+[gd_scene load_steps=3 format=3 uid="uid://bsyu4o6ot57nb"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_78rhr"]
+[ext_resource type="PackedScene" uid="uid://beec41bxjr722" path="res://Scenes/video_player.tscn" id="2_lddcs"]
 
 [node name="Player" type="Node2D"]
 script = ExtResource("1_78rhr")
+
+[node name="VideoStreamPlayer" parent="." instance=ExtResource("2_lddcs")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(512, 288)

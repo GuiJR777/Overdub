@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cr5sxwnt5j1i5"
+path="res://.godot/imported/E ai meu chapa.mp3-3decbd584c654bdf5580ed02d43aaab4.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/E ai meu chapa.mp3"
+dest_files=["res://.godot/imported/E ai meu chapa.mp3-3decbd584c654bdf5580ed02d43aaab4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

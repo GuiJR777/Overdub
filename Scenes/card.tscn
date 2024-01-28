@@ -1,17 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://dwvej1crl3ru3"]
+[gd_scene load_steps=6 format=3 uid="uid://dwvej1crl3ru3"]
 
-[ext_resource type="Texture2D" uid="uid://b0gi2nubsce1e" path="res://Assets/Images/Icons/forward.png" id="1_7v0fd"]
 [ext_resource type="Script" path="res://Scripts/card.gd" id="1_52wlt"]
+[ext_resource type="Texture2D" uid="uid://brnasoioojgym" path="res://Assets/Images/UI/carta de videos.png" id="1_b5qi8"]
 [ext_resource type="AudioStream" uid="uid://b4dymarlckb57" path="res://Assets/Sounds/Memes/droga, e o bria.wav" id="2_4kmkq"]
 [ext_resource type="FontFile" uid="uid://bntwthoihx7p3" path="res://Assets/Fonts/Storyboo.TTF" id="3_kbwp5"]
+[ext_resource type="Texture2D" uid="uid://bby2wkyqlbemi" path="res://Assets/Images/UI/icone pause.png" id="4_uq5qa"]
 
-[node name="Card" type="ColorRect"]
-custom_minimum_size = Vector2(280, 440)
+[node name="Card" type="TextureRect"]
+custom_minimum_size = Vector2(280, 380)
 offset_right = 40.0
 offset_bottom = 40.0
 size_flags_horizontal = 4
 size_flags_vertical = 4
-color = Color(0.564706, 0.564706, 0.564706, 1)
+texture = ExtResource("1_b5qi8")
+expand_mode = 1
 script = ExtResource("1_52wlt")
 audio_name = "Droga é o Brian"
 audio = ExtResource("2_4kmkq")
@@ -33,6 +35,14 @@ layout_mode = 2
 theme_override_constants/separation = 48
 alignment = 1
 
+[node name="PlayPauseButton" type="TextureButton" parent="MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+texture_normal = ExtResource("4_uq5qa")
+ignore_texture_size = true
+stretch_mode = 5
+
 [node name="NameLabel" type="Label" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true
 layout_mode = 2
@@ -42,14 +52,6 @@ text = "Audio Name"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
-
-[node name="PlayPauseButton" type="TextureButton" parent="MarginContainer/VBoxContainer"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(100, 100)
-layout_mode = 2
-texture_normal = ExtResource("1_7v0fd")
-ignore_texture_size = true
-stretch_mode = 5
 
 [node name="VolumeSlider" type="HSlider" parent="MarginContainer/VBoxContainer"]
 unique_name_in_owner = true

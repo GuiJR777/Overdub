@@ -63,6 +63,9 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 48
 text = "00:00"
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+
 [connection signal="finished" from="." to="." method="_on_finished"]
 [connection signal="mouse_entered" from="PlayPauseButton" to="." method="_on_play_pause_button_mouse_entered"]
 [connection signal="mouse_exited" from="PlayPauseButton" to="." method="_on_play_pause_button_mouse_exited"]

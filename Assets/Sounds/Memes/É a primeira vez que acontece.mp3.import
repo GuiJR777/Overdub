@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://doilxg0u1kh0i"
+path="res://.godot/imported/É a primeira vez que acontece.mp3-d2ace9dc49bd94251ed72de48221a0d3.mp3str"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/É a primeira vez que acontece.mp3"
+dest_files=["res://.godot/imported/É a primeira vez que acontece.mp3-d2ace9dc49bd94251ed72de48221a0d3.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

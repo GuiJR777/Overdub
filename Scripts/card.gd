@@ -1,4 +1,4 @@
-extends ColorRect
+extends TextureRect
 class_name AudioCard
 
 @onready var name_label: Label = %NameLabel
@@ -26,8 +26,29 @@ func _process(delta: float) -> void:
 	audio_player.volume_db = volume_slider.value
 
 
+func  _get_drag_data(at_position: Vector2):
+	var preview_texture = TextureRect.new() as TextureRect
+	preview_texture.texture = texture
+	preview_texture.expand_mode = 1
+	preview_texture.size = Vector2(54, 96)
 
+	var preview = Control.new()
+	preview.add_child(preview_texture)
 
+	set_drag_preview(preview)
+
+	return {
+		"card_reference": self,
+		"audio": audio,
+		"audio_name": audio_name,
+		"texture": texture
+	}
+
+func _can_drop_data(_pos, data):
+	pass
+
+func _drop_data(_pos, data):
+	pass
 
 func _on_play_pause_button_mouse_entered() -> void:
 	play_pause_button.modulate = Color.DIM_GRAY
