@@ -1,7 +1,13 @@
-[gd_scene load_steps=3 format=3 uid="uid://c72c6lbi4ybtb"]
+[gd_scene load_steps=4 format=3 uid="uid://c72c6lbi4ybtb"]
 
 [ext_resource type="Script" path="res://Scripts/voting_room.gd" id="1_jslx2"]
 [ext_resource type="Texture2D" uid="uid://c543epkub6e4t" path="res://Assets/Images/UI/Temporary/empty.png" id="4_atswt"]
+
+[sub_resource type="SceneReplicationConfig" id="SceneReplicationConfig_wm40i"]
+properties/0/path = NodePath(".:videos_to_vote")
+properties/0/spawn = true
+properties/0/sync = true
+properties/0/watch = true
 
 [node name="VotingRoom" type="Control"]
 layout_mode = 3
@@ -97,3 +103,6 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 36
 text = "Próximo"
 vertical_alignment = 1
+
+[node name="MultiplayerSynchronizer" type="MultiplayerSynchronizer" parent="."]
+replication_config = SubResource("SceneReplicationConfig_wm40i")

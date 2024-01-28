@@ -56,7 +56,7 @@ func spawn_random_sound_cards(amount: int):
 
 func edition_finish():
 	print("Edição finalizada")
-	player_reference.video_data["stream"] = video_stream_player.stream
+	player_reference.video_data["stream"] = video_stream_player.stream.file
 	player_reference.video_data["audios_map"] = video_stream_player.audios_map
 	player_reference.video_data["total_video_duration"] = video_stream_player.total_video_duration
 	finish_edition.emit()
