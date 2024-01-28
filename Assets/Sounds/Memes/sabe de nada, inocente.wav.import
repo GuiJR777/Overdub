@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cg7muxohql27d"
+path="res://.godot/imported/sabe de nada, inocente.wav-d6813b05c71a5216f94f8f897770947e.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/sabe de nada, inocente.wav"
+dest_files=["res://.godot/imported/sabe de nada, inocente.wav-d6813b05c71a5216f94f8f897770947e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bf25405408rwj"
+path="res://.godot/imported/ele é um homem, um homem bonito.wav-bf8f9e94b307acb61f39302f08c3cfeb.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/ele é um homem, um homem bonito.wav"
+dest_files=["res://.godot/imported/ele é um homem, um homem bonito.wav-bf8f9e94b307acb61f39302f08c3cfeb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

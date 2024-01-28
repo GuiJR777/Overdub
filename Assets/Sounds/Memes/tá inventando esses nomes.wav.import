@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://rt5qfhth0p27"
+path="res://.godot/imported/tá inventando esses nomes.wav-ed6e435066e69c9aeed5ad2a110d713b.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/tá inventando esses nomes.wav"
+dest_files=["res://.godot/imported/tá inventando esses nomes.wav-ed6e435066e69c9aeed5ad2a110d713b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

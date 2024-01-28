@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dqw6lo1p4xq6b"
+path="res://.godot/imported/é isso aí, escreveu não leu o pau comeu.wav-78c7ac1dd76da26810472c6d386d0c66.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/é isso aí, escreveu não leu o pau comeu.wav"
+dest_files=["res://.godot/imported/é isso aí, escreveu não leu o pau comeu.wav-78c7ac1dd76da26810472c6d386d0c66.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

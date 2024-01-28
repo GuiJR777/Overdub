@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://didyl35tuw37b"
+path="res://.godot/imported/por que está me olhando, idiota, nunca me viu não.wav-f232bde574fdeecf2fcbb75ae4d4a90d.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/por que está me olhando, idiota, nunca me viu não.wav"
+dest_files=["res://.godot/imported/por que está me olhando, idiota, nunca me viu não.wav-f232bde574fdeecf2fcbb75ae4d4a90d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

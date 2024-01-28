@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://broe6k0213s27"
+path="res://.godot/imported/(menu GO BACK dã hã hãi).wav-ee1677802762d9dd2aa4bbdd78db4b1b.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/UI/(menu GO BACK dã hã hãi).wav"
+dest_files=["res://.godot/imported/(menu GO BACK dã hã hãi).wav-ee1677802762d9dd2aa4bbdd78db4b1b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

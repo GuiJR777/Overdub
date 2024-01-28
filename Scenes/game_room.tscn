@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://b75mgc4db05n2"]
+[gd_scene load_steps=6 format=3 uid="uid://b75mgc4db05n2"]
 
 [ext_resource type="Texture2D" uid="uid://bkwt1d8oehcga" path="res://Assets/Images/UI/OVERDUR-B1 sem borda.png" id="1_icpbw"]
+[ext_resource type="Script" path="res://Scripts/game_room.gd" id="1_lbift"]
 [ext_resource type="Texture2D" uid="uid://bpefh2efiobqc" path="res://Assets/Images/UI/logo_2.png" id="2_ifo8o"]
 [ext_resource type="PackedScene" uid="uid://b06nk681k1ij7" path="res://Scenes/transition.tscn" id="3_60d18"]
 [ext_resource type="AudioStream" uid="uid://bmaf5al62hlcc" path="res://Assets/Sounds/UI/menu.mp3" id="4_3mqlb"]
 
 [node name="GameRoom" type="Node2D"]
+script = ExtResource("1_lbift")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -42,5 +44,8 @@ expand_mode = 1
 unique_name_in_owner = true
 stream = ExtResource("4_3mqlb")
 autoplay = true
+
+[node name="PlayersNode" type="Node2D" parent="."]
+unique_name_in_owner = true
 
 [connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished" flags=18]

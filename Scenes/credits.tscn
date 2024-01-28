@@ -1,0 +1,122 @@
+[gd_scene load_steps=8 format=3 uid="uid://bfkcenbmukbxt"]
+
+[ext_resource type="Texture2D" uid="uid://b40cysupp3jyq" path="res://Assets/Images/UI/menu game.png" id="1_3fplh"]
+[ext_resource type="Script" path="res://Scripts/credits.gd" id="1_x70ca"]
+[ext_resource type="Texture2D" uid="uid://bpefh2efiobqc" path="res://Assets/Images/UI/logo_2.png" id="2_83foi"]
+[ext_resource type="PackedScene" uid="uid://b06nk681k1ij7" path="res://Scenes/transition.tscn" id="3_ggqhe"]
+[ext_resource type="FontFile" uid="uid://bntwthoihx7p3" path="res://Assets/Fonts/Storyboo.TTF" id="3_ie4fb"]
+[ext_resource type="Texture2D" uid="uid://87ra7ebnyrvy" path="res://Assets/Images/Icons/exitLeft.png" id="4_3vgtd"]
+[ext_resource type="AudioStream" uid="uid://bmaf5al62hlcc" path="res://Assets/Sounds/UI/menu.mp3" id="4_dej7s"]
+
+[node name="Credits" type="Node2D"]
+script = ExtResource("1_x70ca")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="BG" type="TextureRect" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_3fplh")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 48
+theme_override_constants/margin_top = 48
+theme_override_constants/margin_right = 48
+theme_override_constants/margin_bottom = 48
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer"]
+custom_minimum_size = Vector2(80, 80)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+texture = ExtResource("2_83foi")
+expand_mode = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/MarginContainer/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 48
+alignment = 1
+
+[node name="Member" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3_ie4fb")
+theme_override_font_sizes/font_size = 48
+text = "Cryslane M. Silva - Game Artist"
+vertical_alignment = 1
+
+[node name="Member2" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3_ie4fb")
+theme_override_font_sizes/font_size = 48
+text = "Gaspar Caon - Audio & Music"
+vertical_alignment = 1
+
+[node name="Member3" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3_ie4fb")
+theme_override_font_sizes/font_size = 48
+text = "Guilherme Cesar Lenz - Game Designer
+"
+vertical_alignment = 1
+
+[node name="Member4" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3_ie4fb")
+theme_override_font_sizes/font_size = 48
+text = "Guilherme J. Ramires - Game Programmer
+"
+vertical_alignment = 1
+
+[node name="Member5" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 20
+theme_override_fonts/font = ExtResource("3_ie4fb")
+theme_override_font_sizes/font_size = 48
+text = "Maurin Jr. - Game Artist
+"
+vertical_alignment = 1
+
+[node name="BackButton" type="TextureButton" parent="CanvasLayer/MarginContainer"]
+modulate = Color(0.988235, 0.52549, 0.52549, 1)
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+texture_normal = ExtResource("4_3vgtd")
+
+[node name="Transition" parent="." instance=ExtResource("3_ggqhe")]
+transiction_type = 3
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("4_dej7s")
+autoplay = true
+
+[connection signal="pressed" from="CanvasLayer/MarginContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_audio_stream_player_finished" flags=18]

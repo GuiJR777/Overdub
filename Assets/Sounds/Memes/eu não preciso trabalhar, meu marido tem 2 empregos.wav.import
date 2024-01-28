@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dm5axapngon1g"
+path="res://.godot/imported/eu não preciso trabalhar, meu marido tem 2 empregos.wav-df2c6cba73f744b0336d9bbd420c422c.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/eu não preciso trabalhar, meu marido tem 2 empregos.wav"
+dest_files=["res://.godot/imported/eu não preciso trabalhar, meu marido tem 2 empregos.wav-df2c6cba73f744b0336d9bbd420c422c.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

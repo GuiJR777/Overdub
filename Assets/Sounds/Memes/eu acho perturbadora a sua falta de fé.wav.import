@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ddyeah4sls1cu"
+path="res://.godot/imported/eu acho perturbadora a sua falta de fé.wav-1d2b30e3f9f244e0ff228538a99f1ae5.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/Memes/eu acho perturbadora a sua falta de fé.wav"
+dest_files=["res://.godot/imported/eu acho perturbadora a sua falta de fé.wav-1d2b30e3f9f244e0ff228538a99f1ae5.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

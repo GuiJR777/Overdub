@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://df5lk2q55vsg0"
+path="res://.godot/imported/(menu MOVE HOVER zzzup).wav-f63587393fbe84fa0f83b4592a3bfed6.sample"
+
+[deps]
+
+source_file="res://Assets/Sounds/UI/(menu MOVE HOVER zzzup).wav"
+dest_files=["res://.godot/imported/(menu MOVE HOVER zzzup).wav-f63587393fbe84fa0f83b4592a3bfed6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
