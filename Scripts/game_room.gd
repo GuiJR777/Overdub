@@ -19,6 +19,10 @@ func _ready() -> void:
 		var nickname = players[index][1]
 
 		var player_instance = player_scene.instantiate() as Player
+
+		if id == Networking.id:
+			Networking.player_reference = player_instance
+
 		player_instance.nick_name = nickname
 		player_instance.name = str(id)
 		player_instance.set_multiplayer_authority(id)
@@ -57,6 +61,7 @@ func start_players_editors():
 			player.start_editor(video_resource)
 
 func _on_edition_finish(player):
-	voting_room.add_video(player)
+#	voting_room.add_video(player)
+	pass
 
 

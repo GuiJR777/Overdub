@@ -10,6 +10,7 @@ var id = 0
 var player_nickname = ""
 var peer = null
 var players = []
+var player_reference: Player
 
 signal player_list_updated
 signal server_created_with_success
@@ -63,7 +64,7 @@ func add_player(id, player_nickname):
 		for index in range(players.size()):
 			rpc_id(id, "add_player", players[index][0], players[index][1])
 		rpc("add_player", id, player_nickname)
-	players.append([id, player_nickname])
+	players.append([id, player_nickname, player_reference])
 	player_list_updated.emit()
 	print("Player " + player_nickname + " is Connected")
 
